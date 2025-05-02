@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	email = dylan.bloodworth@gmail.com
+	name = dylanbloodworth
+[core]
+	editor = nvim
