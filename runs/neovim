@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+sudo pacman -S --noconfirm --needed neovim lua51 luarocks
+
+# Can add local neovim packages in here in the future 

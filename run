@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+log() {
+	echo "$1"
+}
+
+
+runs_dir=$HOME/dev/runs/*
+
+
+for s in $runs_dir; do
+	base=$(basename $s)
+	if [[ "$base" != "$1" ]]; then
+		log "Running \"$1\" filtered out $base"
+		continue
+	fi 
+
+	$s
+done
