@@ -5,7 +5,7 @@
     // "width": 1366, // Waybar width
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
+    "modules-center": ["clock", "custom/notifications"],
     "modules-right": ["pulseaudio", "network", "battery", "tray"],
     "hyprland/workspaces": {
     	"format": "{icon}", 
@@ -64,6 +64,11 @@
             "default": ["", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "custom/notifications": {
+        "exec": "lua ~/dev/.config/waybar/scripts/notifs.lua", 
+        "format": " ",
+	"return-type": "json"
     }
 }
 
