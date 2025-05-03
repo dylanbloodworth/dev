@@ -163,7 +163,8 @@ vim.opt.confirm = true
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
-
+vim.keymap.set({ "n", "x" }, "y", '"+y', { desc = "Copy to system clipboard" })
+vim.keymap.set({ "n", "x" }, "p", '"+p', { desc = "Paste from system clipboard" })
 -- Open [P]roject [F]iles
 vim.keymap.set("n", "<leader>pf", vim.cmd.Ex, { desc = "Open [P]roject [F]iles explorer" })
 
@@ -403,11 +404,15 @@ require("lazy").setup({
 				--  All the info you're looking for is in `:help telescope.setup()`
 				--
 				-- defaults = {
-				--   mappings = {
-				--     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-				--   },
+				-- mappings = {
+				-- i = { ["<c-enter>"] = "to_fuzzy_refine" },
 				-- },
-				-- pickers = {}
+				-- },
+
+				pickers = {
+					find_files = { hidden = true }, -- make it so find_files shows hidden dot files
+				},
+
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),
@@ -421,6 +426,7 @@ require("lazy").setup({
 
 			-- See `:help telescope.builtin`
 			local builtin = require("telescope.builtin")
+
 			vim.keymap.set("n", "<leader>sh", builtin.help_tags, { desc = "[S]earch [H]elp" })
 			vim.keymap.set("n", "<leader>sk", builtin.keymaps, { desc = "[S]earch [K]eymaps" })
 			vim.keymap.set("n", "<leader>sf", builtin.find_files, { desc = "[S]earch [F]iles" })
@@ -841,7 +847,13 @@ require("lazy").setup({
 				-- <c-k>: Toggle signature help
 				--
 				-- See :h blink-cmp-config-keymap for defining your own keymap
-				preset = "default",
+				preset = none,
+				["<S-space>"] = { "show", "show_documentation", "hide_documentation" },
+				["<S-h>"] = { "hide" },
+				["<Tab>"] = { "select_and_accept" },
+				["<S-k>"] = { "select_prev", "fallback" },
+				["<S-j>"] = { "select_next", "fallback" },
+				["<C-k>"] = { "show_signature", "hide_signature", "fallback" },
 
 				-- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
 				--    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
