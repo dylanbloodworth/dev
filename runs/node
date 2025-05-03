@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+sudo pacman -Sy
+sudo pacman -S nodejs npm
