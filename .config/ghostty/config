@@ -46,16 +46,10 @@
 # Font
 font-size = 12
 
-
-# BACKGROUND
-background-opacity=0.80
-background-blur=true
-
-
-
-# Look and Feel
-
+# Theme and Look
+theme = "dayfox"
 window-decoration = false
+
+# Key Binds
 keybind=ctrl+shift+w=close_window
-confirm-close-surface=false
 
