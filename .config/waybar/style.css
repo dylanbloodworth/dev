@@ -26,7 +26,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: #577f63;
+    color: #ac5402;
 }
  
 .modules-left {
@@ -50,7 +50,7 @@ window#waybar {
 }
 
 #battery icon {
-    color: red;
+    color:  #b3434e;
 }
 
 #battery.charging {
