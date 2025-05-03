@@ -1,18 +1,17 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Ubuntu Nerd Font";
-    font-size: 13px;
-    min-height: 0;
+    font-family: "Ubuntu";
+    font-size: 15px;
+    padding: 2px 2px 0 2px;
 }
 
 window#waybar {
     background: transparent;
-    color: white;
+    color: #352c24;
 }
 
 #window {
-    font-weight: bold;
     font-family: "Ubuntu";
 }
 /*
@@ -22,14 +21,15 @@ window#waybar {
 */
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 2px;
     background: transparent;
-    color: white;
-    border-top: 2px solid transparent;
 }
 
 #workspaces button.active {
-    color: #33ccff;
+    color: #577f63;
+}
+ 
+.modules-left {
 }
 
 #mode {
@@ -43,7 +43,7 @@ window#waybar {
 }
 
 #clock {
-    font-weight: bold;
+    padding: 3px 0 0 0;
 }
 
 #battery {
@@ -66,13 +66,14 @@ window#waybar {
 }
 
 #network.disconnected {
-    background: #f53c3c;
+    color: #b3434e;
 }
 
 #pulseaudio {
 }
 
 #pulseaudio.muted {
+    color: #b3434e;
 }
 
 #tray {
