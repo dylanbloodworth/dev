@@ -1,2 +1,5 @@
 export XDG_CONFIG_HOME=$HOME/.config
 DEV_ENV=$HOME/dev
+
+
+export PATH=$PATH:/usr/bin/luarocks/
