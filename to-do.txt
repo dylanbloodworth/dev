@@ -1,0 +1,10 @@
+- [ ] Refactor neovim config directory
+	- [X] sync OS and neovim clipboards
+- [X] Added github-cli for managing authentication
+- [ ] write the bootstrap script to establish all the symlinks
+- [ ] Verify if the notification daemon is working
+- [X] install obsidian
+	- [X] cloned zk repo
+	- [] create learning repo?
+- [X] install zotero
+- [X] login office365 vt
