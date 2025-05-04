@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-sudo pacman -S --noconfirm --needed git man otf-font-awesome hyprpaper libnotify wl-clipboard
+sudo pacman -S --noconfirm --needed git github-cli man otf-font-awesome hyprpaper libnotify wl-clipboard
 
