@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+symlink() {
+	local dir=$(basename $1)
+	echo "Remove: $2/$dir"
+	rm -rf $2/$dir
+
+	echo "Link: $1 -> $2/"
+	ln --symbolic --force $1 $2
+}
+
+
+symlink $DEV_ENV/.config/ghostty/ $XDG_CONFIG_HOME
+symlink $DEV_ENV/.config/nvim/ $XDG_CONFIG_HOME
+symlink $DEV_ENV/.config/hypr/ $XDG_CONFIG_HOME
+symlink $DEV_ENV/.config/waybar/ $XDG_CONFIG_HOME
+symlink $DEV_ENV/.config/rofi/ $XDG_CONFIG_HOME
+
+hyprctl reload
