@@ -2,3 +2,6 @@
 
 sudo pacman -S --noconfirm --needed tmux 
 
+cd $DEV_ENV
+git submodule add https://github.com/ThePrimeagen/tmux-sessionizer.git
+

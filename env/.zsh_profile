@@ -1,3 +1,7 @@
+# Global Enviroment Variables
 export XDG_CONFIG_HOME="$HOME/.config"
 export DEV_ENV="$HOME/dev"
 export PATH="$PATH:/usr/bin/luarocks/"
+
+# ZSH Key Binds
+bindkey -s ^f "$DEV_ENV/tmux-sessionizer/tmux-sessionizer\n"

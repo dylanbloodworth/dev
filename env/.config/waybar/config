@@ -6,7 +6,7 @@
 
     "modules-left": ["hyprland/workspaces", "memory", "temperature"],
     "modules-center": ["clock"],
-    "modules-right": ["wireplumber", "battery", "backlight", "hyprland/language", "network", "bluetooth", "tray"],
+    "modules-right": ["wireplumber", "battery", "backlight", "network", "bluetooth", "tray"],
 
     "hyprland/workspaces": {
         "format": "<span size='larger'>{icon}</span>",
@@ -34,7 +34,6 @@
         "format": "\udb81\udd7e  {volume}%",
         "max-volume": 100,
         "scroll-step": 5,
-	"on-click": "pavucontrol"
     },
 
     "battery": {
@@ -62,7 +61,7 @@
         "tooltip-format-wifi": "{essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{ifname}",
         "tooltip-format-disconnected": "Disconnected",
-	"on-click": "/home/dylan/dev/.config/waybar/scripts/network.sh"
+	"on-click": "/home/dylan/dev/env/.config/waybar/scripts/network.sh"
     },
 
     "bluetooth": {

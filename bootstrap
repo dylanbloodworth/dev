@@ -10,10 +10,11 @@ symlink() {
 }
 
 
-symlink $DEV_ENV/.config/ghostty/ $XDG_CONFIG_HOME
-symlink $DEV_ENV/.config/nvim/ $XDG_CONFIG_HOME
-symlink $DEV_ENV/.config/hypr/ $XDG_CONFIG_HOME
-symlink $DEV_ENV/.config/waybar/ $XDG_CONFIG_HOME
-symlink $DEV_ENV/.config/rofi/ $XDG_CONFIG_HOME
+symlink $DEV_ENV/env/.config/ghostty/ $XDG_CONFIG_HOME
+symlink $DEV_ENV/env/.config/nvim/ $XDG_CONFIG_HOME
+symlink $DEV_ENV/env/.config/hypr/ $XDG_CONFIG_HOME
+symlink $DEV_ENV/env/.config/waybar/ $XDG_CONFIG_HOME
+symlink $DEV_ENV/env/.config/rofi/ $XDG_CONFIG_HOME
+symlink $DEV_ENV/env/.config/.gitconfig $HOME
 
 hyprctl reload
