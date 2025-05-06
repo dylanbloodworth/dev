@@ -1,75 +1,82 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar at the bottom of your screen
-    "height": 24, // Waybar height
-    // "width": 1366, // Waybar width
-    // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock", "custom/notifications"],
-    "modules-right": ["pulseaudio", "network", "battery", "tray"],
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "spacing": 5,
+
+    "modules-left": ["hyprland/workspaces", "memory", "temperature"],
+    "modules-center": ["clock"],
+    "modules-right": ["wireplumber", "battery", "backlight", "hyprland/language", "network", "bluetooth", "tray"],
+
     "hyprland/workspaces": {
-    	"format": "{icon}", 
-	"format-icons": {
-	    "1": "",
-	    "8": "",
-	    "3": "",
-	},
-	"sort-by-number": true
+        "format": "<span size='larger'>{icon}</span>",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "\uf444",
+            "default": "\uf4c3"
+        },
+        "icon-size": 10,
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+        }
     },
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
-    },
+
     "clock": {
-    	"format": "{:%I:%M %p}",
-        "format-alt": "{:%Y-%m-%d}",
-	"tooltip-format": "Timezone: {:%Z}"
+        "format": "{:%d.%m.%Y | %I:%M %p}"
     },
-    "cpu": {
-        "format": "{usage}% "
+
+    "wireplumber": {
+        "format": "\udb81\udd7e  {volume}%",
+        "max-volume": 100,
+        "scroll-step": 5,
+	"on-click": "pavucontrol"
     },
-    "memory": {
-        "format": "{}% "
-    },
+
     "battery": {
         "bat": "BAT1",
-        "states": {
-            // "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "interval": 60,
+        "format": "{icon}  {capacity}%",
+        "format-icons": ["\uf244", "\uf243", "\uf242", "\uf241", "\uf240"],
     },
+
+    "backlight": {
+        "format": "\udb80\udcdf  {percent}%"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "\uf4bc  {used:0.1f}G"
+    },
+
     "network": {
-    	// can add formats for ethernet 
-    	"format-wifi": "",
-	"format-disconnected": "disconnected",
-	"tooltip-format-wifi": "SSID: {essid} \nipv4: {ipaddr} \ngateway: {gwaddr}",
-	"max-length": 20
+        "format": "",
+        "format-ethernet": "\udb83\udc9d",
+        "format-wifi": "{icon}",
+        "format-disconnected": "\udb83\udc9c",
+        "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}",
+        "tooltip-format-disconnected": "Disconnected",
+	"on-click": "/home/dylan/dev/.config/waybar/scripts/network.sh"
     },
-    "pulseaudio": {
-        //"scroll-step": 1,
-        "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
-        },
-        "on-click": "pavucontrol"
+
+    "bluetooth": {
+        "format": "\udb80\udcaf",
+        "format-disabled": "\udb80\udcb2",
+        "format-connected": "\udb80\udcb1",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"on-click": "ghostty -e bluetui"
     },
-    "custom/notifications": {
-        "exec": "lua ~/dev/.config/waybar/scripts/notifs.lua", 
-        "format": " ",
-	"return-type": "json"
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 16
     }
 }
-

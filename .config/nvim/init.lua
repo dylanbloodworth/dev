@@ -743,17 +743,24 @@ require("lazy").setup({
 		},
 	},
 
-	{ -- You can easily change to a different colorscheme.
-		-- Change the name of the colorscheme plugin below, and then
-		-- change the command in the config to whatever the name of that colorscheme is.
-		--
-		-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-		"EdenEast/nightfox.nvim",
-		config = function()
-			-- Load the colorscheme here.
-			vim.cmd.colorscheme("dayfox")
-		end,
-	},
+	-- { -- You can easily change to a different colorscheme.
+	-- 	-- Change the name of the colorscheme plugin below, and then
+	-- 	-- change the command in the config to whatever the name of that colorscheme is.
+	-- 	--
+	-- 	-- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
+	-- 	"EdenEast/nightfox.nvim",
+	-- 	config = function()
+	-- 		-- Load the colorscheme here.
+	-- 		vim.cmd.colorscheme("carbonfox")
+	-- 	end,
+	-- },
+
+	-- Transparent.nvim caches and applies to the transparency settings
+	-- by running either of the following commands:
+	--    :TransparentEnable
+	--    :TransparentDisable
+	--    :TransparentToggle
+	{ "xiyaowong/transparent.nvim" },
 
 	-- Highlight todo, notes, etc in comments
 	{

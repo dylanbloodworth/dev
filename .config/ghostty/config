@@ -47,9 +47,10 @@
 font-size = 24
 
 # Theme and Look
-theme = "dayfox"
+background = 000000
+background-opacity = 0.75
 window-decoration = false
 
-# Key Binds
-keybind=ctrl+shift+w=close_window
-
+# Terminal
+confirm-close-surface = false
+shell-integration = detect

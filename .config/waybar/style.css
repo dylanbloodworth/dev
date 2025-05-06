@@ -1,83 +1,39 @@
+@define-color foreground #eeeeee;
+@define-color foreground-inactive #aaaaaa;
+@define-color background #000000;
+
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "Ubuntu";
+    font-family: JetBrainsMono Nerd Font;
     font-size: 24px;
-    padding: 5px 5px 0 5px;
+    padding: 0;
+    margin: 0;
 }
 
-window#waybar {
-    background: transparent;
-    color: #352c24;
+#waybar {
+    color: @foreground;
+    background-color: @background;
 }
-
-#window {
-    font-family: "Ubuntu";
-}
-/*
-#workspaces {
-    padding: 0 5px;
-}
-*/
 
 #workspaces button {
-    font-size: 30px;
-    padding: 0 2px;
-    background: transparent;
+    color: @foreground;
+    padding-left: 0.7em;
 }
 
-#workspaces button.active {
-    color: #ac5402;
-}
- 
-.modules-left {
+#workspaces button.empty {
+    color: @foreground-inactive;
 }
 
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+#memory,
+#temperature {
+    padding-left: 1em
 }
 
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #tray, #mode {
-    padding: 0 3px;
-    margin: 0 2px;
-}
-
-#clock {
-    padding: 3px 0 0 0;
-}
-
-#battery {
-}
-
-#battery icon {
-    color:  #b3434e;
-}
-
-#battery.charging {
-}
-
-#cpu {
-}
-
-#memory {
-}
-
-#network {
-}
-
-#network.disconnected {
-    color: #b3434e;
-}
-
-#pulseaudio {
-}
-
-#pulseaudio.muted {
-    color: #b3434e;
-}
-
+#wireplumber,
+#battery,
+#backlight,
+#language,
+#network,
+#bluetooth,
 #tray {
+    padding-right: 1em 
 }
-
-
