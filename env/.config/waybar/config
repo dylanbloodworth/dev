@@ -6,7 +6,7 @@
 
     "modules-left": ["hyprland/workspaces", "memory", "temperature"],
     "modules-center": ["clock"],
-    "modules-right": ["wireplumber", "battery", "backlight", "network", "bluetooth", "tray"],
+    "modules-right": ["wireplumber", "battery", "backlight", "network", "bluetooth", "custom/poweroff", "tray"],
 
     "hyprland/workspaces": {
         "format": "<span size='larger'>{icon}</span>",
@@ -77,5 +77,11 @@
     "tray": {
         "icon-size": 16,
         "spacing": 16
+    },
+
+    "custom/poweroff": {
+    	"format" : "",
+	"tooltip": false,
+	"on-click" : "rofi -show fb -modes \"fb:./poweroff.sh\" -theme-str 'window {width: 7%; location: north east; anchor: north east; y-offset: 2px; font: \"JetBrainsMono Nerd Font 12\";} inputbar {enabled: false;}'",
     }
 }
