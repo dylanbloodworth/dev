@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+
+# Current version of python
+sudo yay -Syu python 3.13.3-1 --noconfirm --needed

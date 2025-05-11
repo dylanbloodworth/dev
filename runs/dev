@@ -3,6 +3,7 @@
 # Desktop Ecosystem
 sudo pacman -S --noconfirm --needed brightnessctl libnotify ttf-jetbrains-mono-nerd otf-font-awesome 
 sudo pacman -S --noconfirm --needed bluez bluez-utils bluetui
+sudo pacman -S --noconfirm --needed pavucontrol
 
 # Terminal Ecosystem
 sudo pacman -S --noconfirm --needed git github-cli man wl-clipboard

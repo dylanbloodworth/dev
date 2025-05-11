@@ -27,7 +27,7 @@
     },
 
     "clock": {
-        "format": "{:%d.%m.%Y | %I:%M %p}"
+        "format": "{:%m.%d.%Y | %I:%M %p}"
     },
 
     "wireplumber": {
