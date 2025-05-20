@@ -14,3 +14,4 @@ sudo pacman -S --noconfirm --needed hyprpaper hypridle hyprlock hyprsunset
 # GUI Applications
 sudo pacman -S --noconfirm --needed obsidian
 yay -S --noconfirm --needed zotero
+yay -S --noconfirm --needed librewolf 
