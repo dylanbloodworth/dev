@@ -37,9 +37,6 @@ vim.g.clipboard = {
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
-vim.keymap.set({ "n", "x" }, "y", '"+y', { desc = "Copy to system clipboard" })
-vim.keymap.set({ "n", "x" }, "p", '"+p', { desc = "Paste from system clipboard" })
-
 -- Open [P]roject [F]iles
 vim.keymap.set("n", "<leader>pf", vim.cmd.Ex, { desc = "Open [P]roject [F]iles explorer" })
 
