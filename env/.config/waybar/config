@@ -32,6 +32,7 @@
 
     "wireplumber": {
         "format": "\udb81\udd7e  {volume}%",
+	"format-muted": "\uf026",
         "max-volume": 100,
         "scroll-step": 5,
 	"on-click": "pavucontrol",
