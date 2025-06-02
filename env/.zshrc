@@ -26,3 +26,9 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 source ~/.zsh_profile
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/dylan/.config/.dart-cli-completion/zsh-config.zsh ]] && . /home/dylan/.config/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
