@@ -28,7 +28,12 @@
     padding-left: 1em
 }
 
-#wireplumber,
+#network.disconnected,
+#pulseaudio.muted {
+    color: #B53B3B;
+}
+
+#pulseaudio,
 #battery,
 #backlight,
 #language,

@@ -4,9 +4,9 @@
     "height": 24,
     "spacing": 5,
 
-    "modules-left": ["hyprland/workspaces", "memory", "temperature"],
+    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock"],
-    "modules-right": ["wireplumber", "battery", "backlight", "network", "bluetooth", "custom/poweroff", "tray"],
+    "modules-right": ["pulseaudio", "battery", "backlight", "network", "bluetooth", "custom/poweroff", "tray"],
 
     "hyprland/workspaces": {
         "format": "<span size='larger'>{icon}</span>",
@@ -25,18 +25,26 @@
             "5": [],
         }
     },
+    "hyprland/submap": {
+	"format": "  {}", 
+	"max-length": 30,
+	"tooltip": false,
+	"on-click": "hyprctl dispatch submap reset"
+    },
 
     "clock": {
-        "format": "{:%m.%d.%Y | %I:%M %p}"
+        "format": "{:%m.%d.%Y | %I:%M %p}",
+	"tooltip": false
     },
-
-    "wireplumber": {
-        "format": "\udb81\udd7e  {volume}%",
-	"format-muted": "\uf026",
-        "max-volume": 100,
-        "scroll-step": 5,
-	"on-click": "pavucontrol",
+"pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+        "default": ["", " "]
     },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+},
 
     "battery": {
         "bat": "BAT1",
@@ -46,12 +54,7 @@
     },
 
     "backlight": {
-        "format": "\udb80\udcdf  {percent}%"
-    },
-
-    "memory": {
-        "interval": 30,
-        "format": "\uf4bc  {used:0.1f}G"
+        "format": "\udb80\udcdf {percent}%"
     },
 
     "network": {
@@ -60,7 +63,7 @@
         "format-wifi": "{icon}",
         "format-disconnected": "\udb83\udc9c",
         "format-icons": ["\udb82\udd2f", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"],
-        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-wifi": "{essid} ({signaldBm}dBm)",
         "tooltip-format-ethernet": "{ifname}",
         "tooltip-format-disconnected": "Disconnected",
 	"on-click": "/home/dylan/dev/env/.config/waybar/scripts/network.sh"
@@ -84,6 +87,6 @@
     "custom/poweroff": {
     	"format" : "",
 	"tooltip": false,
-	"on-click" : "rofi -show fb -modes \"fb:/home/dylan/dev/env/.config/waybar/scripts/poweroff.sh\" -theme-str 'window {width: 7%; location: north east; anchor: north east; y-offset: 2px; font: \"JetBrainsMono Nerd Font 12\";} inputbar {enabled: false;}'",
+	"on-click" : "rofi -show poweroff -theme-str 'window {width: 7%; location: north east; anchor: north east; y-offset: 2px; font: \"JetBrainsMono Nerd Font 12\";} inputbar {enabled: false;}'",
     }
 }

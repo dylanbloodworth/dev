@@ -146,14 +146,51 @@ configuration {
 /*	me-select-entry: "MousePrimary";*/
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
-  timeout {
-      action: "kb-cancel";
-      delay:  0;
-  }
   filebrowser {
       directories-first: true;
       sorting-method:    "name";
   }
 }
 
-@theme "/usr/share/rofi/themes/rounded-blue-dark.rasi"
+window {
+	width: 25%;
+	background-color: black;
+	border: 0;
+}
+mainbox {
+	padding: 0.5em;
+}
+prompt {
+	padding: 0 0.3em 0 0;
+}
+entry {
+	text-color: gray;
+	placeholder: "";
+	hide-cursor-on-empty: true;
+	blink: false;
+}
+listview {
+	dynamic: true;
+	scrollbar: false;
+	cycle: true;
+	fixed-height: false;
+	lines: 6;
+}
+element {
+	border: 0px;
+	border-color: black;
+	padding: 0;
+	margin: 0.1em;
+}
+element-icon {
+	enabled: false;
+}
+element-text {
+	text-color: gray;
+	background-color: black;
+	highlight: underline blue;
+	padding: 0 0 0 0.5em;
+}
+element-text.selected {
+	text-color: white;
+}
