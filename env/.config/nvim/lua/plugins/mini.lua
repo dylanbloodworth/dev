@@ -14,7 +14,7 @@ return { -- collection of various small independent plugins/modules
 		-- - saiw) - [s]urround [a]dd [i]nner [w]ord [)]paren
 		-- - sd'   - [s]urround [d]elete [']quotes
 		-- - sr)'  - [s]urround [r]eplace [)] [']
-		require("mini.surround").setup()
+		require("mini.surround").setup({ n_lines = 20 })
 
 		-- simple and easy statusline.
 		--  you could remove this setup call if you don't like it,
