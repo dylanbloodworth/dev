@@ -4,6 +4,10 @@ export DEV_ENV="$HOME/dev"
 export PATH="$PATH:/usr/bin/luarocks/"
 export PATH="$PATH:/home/dylan/.local/share/gem/ruby/3.4.0/bin"
 export PATH="$PATH:/home/dylan/.gem/ruby/3.4.0/bin"
+export PATH="$PATH:/usr/local/texlive/2025/bin/x86_64-linux"
+
+export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="$MANPATH:/usr/local/texlive/2025/texmf-dist/doc/man"
 
 # ZSH Key Binds
 bindkey -s ^f "$DEV_ENV/tmux-sessionizer/tmux-sessionizer\n"
