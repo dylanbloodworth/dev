@@ -12,11 +12,11 @@ case "$(printf "Kill App\nLock\nZzz\nRestart\nShutdown" | rofi -dmenu -i -l 5 -p
 	        systemctl suspend
 	        exit 0
 		;;
-	"Zzz")
+	"Restart")
 	        systemctl reboot
 	        exit 0
 		;;
-	"Zzz")
+	"Shutdown")
 	        systemctl poweroff
 	        exit 0
 		;;
