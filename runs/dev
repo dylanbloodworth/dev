@@ -4,6 +4,7 @@
 sudo pacman -S --noconfirm --needed brightnessctl libnotify ttf-jetbrains-mono-nerd otf-font-awesome 
 sudo pacman -S --noconfirm --needed bluez bluez-utils bluetui
 sudo pacman -S --noconfirm --needed pavucontrol
+sudo pacman -S --noconfirm --needed powerprofilesctl 
 
 # Terminal Ecosystem
 sudo pacman -S --noconfirm --needed git github-cli man wl-clipboard
@@ -14,6 +15,6 @@ sudo pacman -S --noconfirm --needed hyprpaper hypridle hyprlock hyprsunset
 # GUI Applications
 sudo pacman -S --noconfirm --needed obsidian
 yay -S --noconfirm --needed zotero
-# yay -S --noconfirm --needed librewolf 
+yay -S --noconfirm --needed librewolf 
 sudo pacman -S --noconfirm --needed gimp inkscape
 yay -S localsend
