@@ -12,5 +12,7 @@ return {
 		{ "<leader>vs", "<cmd>VenvSelect<cr>" },
 	},
 	---@type venv-selector.Config
-	opts = {},
+	opts = {
+		stay_on_this_version = true,
+	},
 }
