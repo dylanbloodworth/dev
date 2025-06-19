@@ -14,3 +14,17 @@ require("config.options")
 require("core.lazy")
 require("config.keymaps")
 require("config.autocommands")
+
+vim.lsp.enable({
+	--shell
+	"bashls",
+	-- lua
+	"lua_ls",
+	-- go
+	"gopls",
+	-- python
+	"pyright",
+	--web dev
+	"astro",
+	"html",
+})
