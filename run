@@ -3,9 +3,7 @@ log() {
 	echo "$1"
 }
 
-
 runs_dir=$HOME/dev/runs/*
-
 
 for s in $runs_dir; do
 	base=$(basename $s)

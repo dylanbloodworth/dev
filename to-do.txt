@@ -1,0 +1,2 @@
+- [] Look at nvim lsp config for neovim 0.11+
+
