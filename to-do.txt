@@ -1,2 +1,4 @@
-- [] Look at nvim lsp config for neovim 0.11+
+- [X] Look at nvim lsp config for neovim 0.11+
+	- [] look into or implement feature to access documentation
+	https://smarttech101.com/nvim-lsp-configure-language-servers-shortcuts-highlights
 
