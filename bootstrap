@@ -15,6 +15,7 @@ symlink $DEV_ENV/env/.config/nvim/ $XDG_CONFIG_HOME
 symlink $DEV_ENV/env/.config/hypr/ $XDG_CONFIG_HOME
 symlink $DEV_ENV/env/.config/waybar/ $XDG_CONFIG_HOME
 symlink $DEV_ENV/env/.config/rofi/ $XDG_CONFIG_HOME
+symlink $DEV_ENV/env/.config/mako/ $XDG_CONFIG_HOME
 symlink $DEV_ENV/env/.config/.gitconfig $HOME
 
 hyprctl reload
